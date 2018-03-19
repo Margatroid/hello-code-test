@@ -7,4 +7,9 @@ describe('rendering', () => {
     const wrapper = shallow(<CheckboxWithLabel value={true}/>);
     expect(wrapper.find('input').length).toEqual(1);
   });
+
+  it('renders label text', () => {
+    const wrapper = shallow(<CheckboxWithLabel labelText='Hello!' value={true}/>);
+    expect(wrapper.find('label').text()).toEqual('Hello!');
+  });
 });

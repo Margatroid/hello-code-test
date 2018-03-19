@@ -10,12 +10,14 @@ class CheckboxWithLabel extends React.Component {
   render() {
     return <div>
       <input type='checkbox' value={this.state.value} id='checkbox'/>
+      <label>{this.props.labelText}</label>
     </div>;
   }
 };
 
 CheckboxWithLabel.propTypes = {
-  value: PropTypes.bool.isRequired
+  value: PropTypes.bool.isRequired,
+  labelText: PropTypes.string
 };
 
 export default CheckboxWithLabel;
