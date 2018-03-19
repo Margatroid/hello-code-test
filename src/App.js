@@ -4,6 +4,11 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { checked: false };
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,7 +17,7 @@ class App extends Component {
           <h1 className="App-title">Checkbox with label</h1>
         </header>
         <div className='App-container'>
-          <CheckboxWithLabel/>
+          <CheckboxWithLabel value={this.state.checked}/>
         </div>
       </div>
     );

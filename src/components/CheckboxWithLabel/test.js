@@ -4,7 +4,7 @@ import CheckboxWithLabel from './';
 
 describe('rendering', () => {
   it('will render an input', () => {
-    const wrapper = shallow(<CheckboxWithLabel/>);
+    const wrapper = shallow(<CheckboxWithLabel value={true}/>);
     expect(wrapper.find('input').length).toEqual(1);
   });
 });

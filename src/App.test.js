@@ -18,5 +18,5 @@ it('renders with enzyme', () => {
 
 it('renders my checkbox', () => {
   const wrapper = shallow(<App />);
-  expect(wrapper.contains(<CheckboxWithLabel/>)).toEqual(true);
+  expect(wrapper.contains(<CheckboxWithLabel value={false}/>)).toEqual(true);
 });
